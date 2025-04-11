@@ -17,8 +17,8 @@ Widget _contentSlide(String imagePath, String title, VoidCallback onTap) {
     child: GestureDetector(
       onTap: onTap,
       child: Container(
-        height: 160,
-        width: 300,
+        height: 120,
+        width: 200,
         margin: const EdgeInsets.all(10),
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
@@ -56,20 +56,25 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Row(
           children: [
-            Icon(Icons.music_note, color: ColorCustom.iconTitleColor),
+            Icon(FontAwesomeIcons.music, color: Colors.white),
+            SizedBox(width: 10),
             Text(
               "Audio Player",
-              style: GoogleFonts.pacifico(
-                color: ColorCustom.titleColor,
-                fontSize: 18,
-              ),
+              style: GoogleFonts.pacifico(color: Colors.white, fontSize: 18),
             ),
           ],
         ),
         flexibleSpace: Container(
           decoration: BoxDecoration(
-            gradient: ColorCustom.appBarGradient,
+            gradient: ColorCustom.backgroundGradient,
             shape: BoxShape.rectangle,
+            boxShadow: [
+              BoxShadow(
+                blurRadius: 5,
+                color: Colors.blueAccent,
+                offset: Offset(1, 1),
+              ),
+            ],
           ),
         ),
         backgroundColor: ColorCustom.background,
@@ -77,72 +82,120 @@ class _HomePageState extends State<HomePage> {
       ),
       body: ListView(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 12.0, top: 8.0, bottom: 8.0),
-            child: Row(
+          Container(
+            margin: EdgeInsets.only(top: 10),
+            padding: const EdgeInsets.all(10),
+            decoration: BoxDecoration(color: Colors.white),
+            child: Column(
               children: [
-                Icon(FontAwesomeIcons.solidHeart, color: Colors.red),
-                SizedBox(width: 10),
-                Container(
-                  child: Text(
-                    "List Album Terpopuler",
-                    style: GoogleFonts.poppins(fontSize: 17),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 12.0,
+                    top: 8.0,
+                    bottom: 8.0,
+                  ),
+                  child: Container(
+                    child: Row(
+                      children: [
+                        Icon(
+                          FontAwesomeIcons.solidHeart,
+                          color: Colors.red,
+                          size: 20,
+                        ),
+                        SizedBox(width: 10),
+                        Container(
+                          child: Text(
+                            "List Album Terpopuler",
+                            style: GoogleFonts.poppins(fontSize: 13),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      _contentSlide(
+                        "assets/images/slides/dewa19.jpeg",
+                        "Music 1",
+                        () {
+                          Navigator.pushNamed(context, '/listmusikalbum');
+                        },
+                      ),
+                      _contentSlide(
+                        "assets/images/slides/osean.jpeg",
+                        "Music 2",
+                        () {
+                          Navigator.pushNamed(context, '/listmusikalbum');
+                        },
+                      ),
+                      _contentSlide(
+                        "assets/images/slides/ryanjones.jpeg",
+                        "Music 3",
+                        () {
+                          Navigator.pushNamed(context, '/listmusikalbum');
+                        },
+                      ),
+                      _contentSlide(
+                        "assets/images/slides/shela.jpeg",
+                        "Music 3",
+                        () {
+                          Navigator.pushNamed(context, '/listmusikalbum');
+                        },
+                      ),
+                      _contentSlide(
+                        "assets/images/slides/thebeat.jpeg",
+                        "Music 3",
+                        () {
+                          Navigator.pushNamed(context, '/listmusikalbum');
+                        },
+                      ),
+                      _contentSlide(
+                        "assets/images/slides/tulus.jpeg",
+                        "Music 3",
+                        () {
+                          Navigator.pushNamed(context, '/listmusikalbum');
+                        },
+                      ),
+                    ],
                   ),
                 ),
               ],
             ),
           ),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                _contentSlide(
-                  "assets/images/slides/dewa19.jpeg",
-                  "Music 1",
-                  () {
-                    Navigator.pushNamed(context, '/listmusikalbum');
-                  },
-                ),
-                _contentSlide("assets/images/slides/osean.jpeg", "Music 2", () {
-                  Navigator.pushNamed(context, '/listmusikalbum');
-                }),
-                _contentSlide(
-                  "assets/images/slides/ryanjones.jpeg",
-                  "Music 3",
-                  () {
-                    Navigator.pushNamed(context, '/listmusikalbum');
-                  },
-                ),
-                _contentSlide("assets/images/slides/shela.jpeg", "Music 3", () {
-                  Navigator.pushNamed(context, '/listmusikalbum');
-                }),
-                _contentSlide(
-                  "assets/images/slides/thebeat.jpeg",
-                  "Music 3",
-                  () {
-                    Navigator.pushNamed(context, '/listmusikalbum');
-                  },
-                ),
-                _contentSlide("assets/images/slides/tulus.jpeg", "Music 3", () {
-                  Navigator.pushNamed(context, '/listmusikalbum');
-                }),
-              ],
-            ),
-          ),
           Padding(
-            padding: const EdgeInsets.only(left: 12.0, top: 12.0, bottom: 8.0),
-            child: Row(
-              children: [
-                Icon(Icons.menu_sharp, color: ColorCustom.iconTitleColor),
-                SizedBox(width: 10),
-                Container(
-                  child: Text(
-                    "Semua List Album",
-                    style: GoogleFonts.poppins(fontSize: 17),
+            padding: const EdgeInsets.only(
+              left: 10.0,
+              top: 10.0,
+              bottom: 10.0,
+              right: 10.0,
+            ),
+            child: Container(
+              padding: const EdgeInsets.all(10),
+              decoration: BoxDecoration(color: Colors.white),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.menu_sharp,
+                        color: ColorCustom.iconTitleColor,
+                        size: 20,
+                      ),
+                      SizedBox(width: 10),
+                      Container(
+                        child: Text(
+                          "Semua List Album",
+                          style: GoogleFonts.poppins(fontSize: 13),
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ],

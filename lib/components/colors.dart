@@ -1,11 +1,11 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
-final Color background = const Color.fromARGB(255, 255, 255, 255);
+final Color background = const Color.fromARGB(255, 241, 241, 241);
 final Gradient backgroundGradient = const LinearGradient(
   begin: Alignment.topLeft,
   end: Alignment.bottomRight,
-  colors: [Color.fromARGB(255, 26, 0, 219), Color.fromARGB(255, 176, 0, 170)],
+  colors: [Color.fromARGB(255, 26, 0, 219), Color.fromARGB(255, 1, 6, 74)],
 );
 
 final Gradient appBarGradient = const LinearGradient(
@@ -30,7 +30,11 @@ final Color iconTitleColor = Colors.black;
 final Gradient iconNavBottomColor = const LinearGradient(
   begin: Alignment.topLeft,
   end: Alignment.bottomRight,
-  colors: [Color.fromARGB(255, 26, 0, 219), Color.fromARGB(255, 176, 0, 170)],
+  colors: [
+    Color.fromARGB(255, 255, 255, 255),
+    Color.fromARGB(255, 247, 247, 252),
+    // Color.fromARGB(255, 26, 0, 219),
+  ],
 );
 
 final Color textColor = Colors.blueGrey;
