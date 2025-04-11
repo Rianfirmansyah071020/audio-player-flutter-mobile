@@ -5,7 +5,10 @@ final Color background = const Color.fromARGB(255, 241, 241, 241);
 final Gradient backgroundGradient = const LinearGradient(
   begin: Alignment.topLeft,
   end: Alignment.bottomRight,
-  colors: [Color.fromARGB(255, 26, 0, 219), Color.fromARGB(255, 1, 6, 74)],
+  colors: [
+    Color.fromARGB(255, 255, 255, 255),
+    Color.fromARGB(255, 250, 250, 255),
+  ],
 );
 
 final Gradient appBarGradient = const LinearGradient(

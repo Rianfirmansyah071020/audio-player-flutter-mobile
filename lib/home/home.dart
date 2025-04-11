@@ -53,14 +53,19 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Layout(
+      keyPage: "home",
       appBar: AppBar(
         title: Row(
           children: [
-            Icon(FontAwesomeIcons.music, color: Colors.white),
+            Icon(FontAwesomeIcons.music, color: Colors.blueAccent),
             SizedBox(width: 10),
             Text(
               "Audio Player",
-              style: GoogleFonts.pacifico(color: Colors.white, fontSize: 18),
+              style: GoogleFonts.pacifico(
+                color: Colors.blueAccent,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ],
         ),
@@ -70,8 +75,8 @@ class _HomePageState extends State<HomePage> {
             shape: BoxShape.rectangle,
             boxShadow: [
               BoxShadow(
-                blurRadius: 5,
-                color: Colors.blueAccent,
+                blurRadius: 4,
+                color: const Color.fromARGB(255, 185, 210, 255),
                 offset: Offset(1, 1),
               ),
             ],

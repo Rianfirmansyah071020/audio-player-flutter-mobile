@@ -5,8 +5,14 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class Layout extends StatefulWidget {
   final AppBar appBar;
   final Widget body;
+  final String keyPage;
 
-  const Layout({super.key, required this.appBar, required this.body});
+  const Layout({
+    super.key,
+    required this.appBar,
+    required this.body,
+    required this.keyPage,
+  });
 
   @override
   State<Layout> createState() => _LayoutState();
@@ -59,9 +65,15 @@ class _LayoutState extends State<Layout> {
                     ],
                   ),
                   child: IconButton(
+                    isSelected: widget.keyPage == "home" ? true : false,
                     onPressed: () {
                       Navigator.pushReplacementNamed(context, '/home');
                     },
+                    selectedIcon: const Icon(
+                      FontAwesomeIcons.house,
+                      color: Colors.lightBlueAccent,
+                      size: 20,
+                    ),
                     icon: const Icon(
                       FontAwesomeIcons.house,
                       color: Colors.blueAccent,
@@ -83,8 +95,19 @@ class _LayoutState extends State<Layout> {
                   ),
                   child: IconButton(
                     onPressed: () {
-                      Navigator.pushReplacementNamed(context, '/home');
+                      Navigator.pushReplacementNamed(
+                        context,
+                        '/listmusikalbum',
+                      );
                     },
+                    selectedIcon: const Icon(
+                      FontAwesomeIcons.music,
+                      color: Colors.lightBlueAccent,
+                      size: 20,
+                    ),
+
+                    isSelected:
+                        widget.keyPage == "listmusikalbum" ? true : false,
                     icon: const Icon(
                       FontAwesomeIcons.music,
                       color: Colors.blueAccent,
