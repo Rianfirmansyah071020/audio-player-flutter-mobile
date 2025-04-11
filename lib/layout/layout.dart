@@ -24,8 +24,16 @@ class _LayoutState extends State<Layout> {
             child: widget.body,
           ),
           bottomNavigationBar: Container(
+            margin: const EdgeInsets.all(10),
             padding: const EdgeInsets.all(5),
             decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  blurRadius: 5,
+                  color: Colors.black54,
+                  offset: Offset(1, 1),
+                ),
+              ],
               gradient: ColorCustom.backgroundNavBottom,
               borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(25),
@@ -41,6 +49,13 @@ class _LayoutState extends State<Layout> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(25),
                     gradient: ColorCustom.iconNavBottomColor,
+                    boxShadow: [
+                      BoxShadow(
+                        blurRadius: 5,
+                        color: Colors.black54,
+                        offset: Offset(1, 1),
+                      ),
+                    ],
                   ),
                   child: IconButton(
                     onPressed: () {
@@ -53,6 +68,13 @@ class _LayoutState extends State<Layout> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(25),
                     gradient: ColorCustom.iconNavBottomColor,
+                    boxShadow: [
+                      BoxShadow(
+                        blurRadius: 5,
+                        color: Colors.black54,
+                        offset: Offset(1, 1),
+                      ),
+                    ],
                   ),
                   child: IconButton(
                     onPressed: () {
@@ -65,6 +87,13 @@ class _LayoutState extends State<Layout> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(25),
                     gradient: ColorCustom.iconNavBottomColor,
+                    boxShadow: [
+                      BoxShadow(
+                        blurRadius: 5,
+                        color: Colors.black54,
+                        offset: Offset(1, 1),
+                      ),
+                    ],
                   ),
                   child: IconButton(
                     onPressed: () {

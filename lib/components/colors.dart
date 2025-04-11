@@ -19,7 +19,10 @@ final Gradient appBarGradient = const LinearGradient(
 final Gradient backgroundNavBottom = const LinearGradient(
   begin: Alignment.topLeft,
   end: Alignment.bottomRight,
-  colors: [Colors.black, Colors.black],
+  colors: [
+    Color.fromARGB(255, 255, 255, 255),
+    Color.fromARGB(255, 255, 255, 255),
+  ],
 );
 
 final Color iconColor = Colors.blueGrey;
