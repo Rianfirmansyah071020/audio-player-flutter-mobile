@@ -55,10 +55,9 @@ class _HomePageState extends State<HomePage> {
     return Layout(
       keyPage: "home",
       appBar: AppBar(
+        leading: Icon(FontAwesomeIcons.music, color: Colors.blueAccent),
         title: Row(
           children: [
-            Icon(FontAwesomeIcons.music, color: Colors.blueAccent),
-            SizedBox(width: 10),
             Text(
               "Audio Player",
               style: GoogleFonts.pacifico(

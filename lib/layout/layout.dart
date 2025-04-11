@@ -95,10 +95,7 @@ class _LayoutState extends State<Layout> {
                   ),
                   child: IconButton(
                     onPressed: () {
-                      Navigator.pushReplacementNamed(
-                        context,
-                        '/listmusikalbum',
-                      );
+                      Navigator.pushNamed(context, '/listmusikalbum');
                     },
                     selectedIcon: const Icon(
                       FontAwesomeIcons.music,
@@ -129,7 +126,7 @@ class _LayoutState extends State<Layout> {
                   ),
                   child: IconButton(
                     onPressed: () {
-                      Navigator.pushReplacementNamed(context, '/home');
+                      Navigator.pushNamed(context, '/home');
                     },
                     icon: const Icon(
                       FontAwesomeIcons.clockRotateLeft,
